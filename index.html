@@ -1,1 +1,84 @@
-Hello World
+<!DOCTYPE html>
+
+<html lang="en-IN">
+
+<head>
+    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script></script>
+    <style>
+        .btn-default{
+            margin-top: 10%;
+            margin-bottom: 10%;
+            color: #009ada;
+            font-size: 1.7vw;
+            width: 22vw;
+        }
+        .btn-default:hover{
+            color: #009aaa;
+            border-color: #009aaa;
+            background-color: white;
+            width: 23vw;
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+
+    <div class="row">
+        <div class="col-md-12">
+            <img id="backImg" style="width: 100%;opacity: 0.8;" src="https://i.pinimg.com/originals/cf/41/3e/cf413e4a7bd6b503ce7828fb6f7b7338.jpg"/>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="position: relative;top: -56vw;"></canvas>
+    <div class="row" style="position: relative;top: -100vw;">
+        <div class="col-md-4 col-sm-5">
+            <!-- arrange tabs in this -->
+            <center id="ltabs_container">
+                <button id="btn1" type="button" class="btn btn-default">Default</button>
+                <br>
+                <button type="button" class="btn btn-default">Default</button>
+                <br>
+                <button type="button" class="btn btn-default">Default</button>
+                <br>
+                <button type="button" class="btn btn-default">Default</button>
+            </center>
+        </div>
+        <div class="col-md-4 col-sm-2">
+            <center>
+                <img id="manImg" style="width: 110%;position: relative;top: 4vw;" src="https://cdn.pixabay.com/photo/2017/06/20/01/36/men-2421455_1280.png"/>
+            </center>
+        </div>
+        <div class="col-md-4 col-sm-5">
+            <!-- arrange tabs in this -->
+            <center id="rtabs_container">
+                <button type="button" class="btn btn-default">Default</button>
+                <br>
+                <button type="button" class="btn btn-default">Default</button>
+                <br>
+                <button type="button" class="btn btn-default">Default</button>
+                <br>
+                <button type="button" class="btn btn-default">Default</button>
+            </center>
+        </div>
+    </div>
+    <script src="JS/index.js"></script>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        $('#manImg').on('load',function(){
+            $(this).css('height', 'auto');
+            var height = $(this).height();
+            console.log('height at addTabs = '+height);
+            addTabs()
+        });
+    </script>
+</body>
+
+</html>
