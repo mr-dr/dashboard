@@ -93,3 +93,8 @@ function getTabHtml(i,title,redirUrl,margin){
     <br>
     `;
 }
+
+function pullElemToTop($elem){
+    var topVal = ('-'+$elem.offset().top+'px');
+    $elem.css({'position':'relative','top':topVal});
+}
